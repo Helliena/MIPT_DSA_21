@@ -21,7 +21,7 @@ int main() {
     solve();
 }
 
-ll const INF = 1e18;
+ll const INF = 1e18;// Ну константы же в системе есть, эх((
 
 void solve () {
     ll n, m;
@@ -45,4 +45,3 @@ void solve () {
     cout << dp[n][m] << endl;
 }
 
- 
