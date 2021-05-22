@@ -54,7 +54,7 @@ vector<vector<ll>> bin_pow (vector<vector<ll> > &x, ll n) {
 
 void solve(){
     ll x;
-    vector < vector <ll> > a;
+    vector < vector <ll> > a;// Списки инициализации могут и матрицу создать, просто {{1,2},{1,2}}
     a.push_back({1, 1, 1, 1, 1});
     a.push_back({1, 1, 1, 1, 1});
     a.push_back({1, 1, 1, 1, 1});
