@@ -22,8 +22,8 @@ int main() {
 }
 
 ll const N = 1e7 + 3;
-list<pair<string, ll>> a[N];
-ll power[N];
+list<pair<string, ll>> a[N];// Глобальные переменные.... ай-ай
+ll power[N];// Аналогично
 
 ll hash_function (string s, ll p) {
   power[0] = 1;
