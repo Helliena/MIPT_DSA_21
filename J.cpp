@@ -26,11 +26,13 @@ ll const INF = 1e18;
 void solve () {
     ll s, n;
     cin >> s >> n;
+    
     vector<ll> a(n);
     vector<bool> v(s + 1, 0);
     for (ll i = 0 ; i < n ; ++i) {
         cin >> a[i];
     }
+    
     v[0] = 1;
     ll ans = 0;
     for (ll i = 0; i < n; ++i) {
@@ -42,6 +44,7 @@ void solve () {
 
         }
     }
+    
     cout << ans << endl;
 }
 
