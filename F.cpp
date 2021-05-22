@@ -20,12 +20,12 @@ int main(){
 }
 
 ll const l = 1e5 + 10, INF = 1e18;
-vector< pair<ll, ll> > g[l];
+vector< pair<ll, ll> > g[l];// Глобальные даже с 1 функцией... это уже хроническое((
 vector<ll> dist(l, INF);
 set< pair<ll, ll> > s;
 
 void solve() {
-    ll n, m, st, fn, u, v, w;
+    ll n, m, st, fn, u, v, w; // Как Менделеев
     cin >> n >> m >> st >> fn;
     st--; fn--;
     for (int i = 0 ; i < m ; i++) {
@@ -39,7 +39,7 @@ void solve() {
     while (!s.empty()) {
         pair <ll, ll> v = *s.begin();
         s.erase(s.begin());
-        for (int i = 0 ; i < g[v.second].size() ; i++) {
+        for (int i = 0 ; i < g[v.second].size() ; i++) {// Почему бы и не выделить в функцию, были ведь... ай, всё ужо
             if (dist[g[v.second][i].first] > dist[v.second] + g[v.second][i].second) {
                 s.erase({dist[g[v.second][i].first], g[v.second][i].first});
                 dist[g[v.second][i].first] = dist[v.second] + g[v.second][i].second;
