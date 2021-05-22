@@ -21,7 +21,7 @@ int main() {
 }
 
 ll const INF = 1e18, N = 110, MOD = 1e9 + 7;
-ll a[N];
+ll a[N];// кхм, а я только понадеялся....
 
 void test(vector<vector<ll>> &m, ll i, ll j) {
     ll temp = a[i] ^ a[j];
@@ -67,7 +67,8 @@ void solve(){
     if (n > m)
         swap(n, m);
     vector<vector<ll>> temp;
-    vector<vector<ll>> mtr(1 << n, vector<ll>(1 << n));
+    vector<vector<ll>> mtr(1 << n, vector<ll>(1 << n));// Опять же, тут требуется только предыдущее значение. И в целом, зачем тебе степень на второй строке,
+	// тебе зватит выкладывать узоры либо только по строкам, либо только по столбцам. Короче сильно перебор, тут хватило бы (2^n)*m
     for (ll i = 0; i < 1 << n; ++i)
         temp.push_back({1});
     for (ll i = 0; i < 1 << n; ++i)
