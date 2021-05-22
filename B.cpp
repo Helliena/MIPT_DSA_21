@@ -24,7 +24,7 @@ int main() {
 ll const INF = 1e18;
 
 void solve () {
-    ll n;
+    ll n;// И всё же ввод красивее отдельно)
     cin >> n;
     vector<ll> a(n);
     vector<ll> dp(n + 1, INF);
@@ -37,7 +37,7 @@ void solve () {
     pos[0] = -1;
     ll ans = 0;
     for (ll i = 0; i < n; i++) {
-        auto bin_s = upper_bound(dp.begin(), dp.end(), a[i]);
+        auto bin_s = upper_bound(dp.begin(), dp.end(), a[i]);// А можно было за логарифм... но ладно
         ll ind = static_cast<ll>(bin_s - dp.begin());
         if (dp[ind - 1] <= a[i] && a[i] < dp[ind]) {
             dp[ind] = a[i];
