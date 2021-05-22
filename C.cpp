@@ -42,7 +42,7 @@ bool find_circle(vector<vector<ll>>& g, vector<ll>& used, ll v, vector<ll>& ans)
 void solve() {
     ll n, m, u, v;
     cin >> n >> m;
-    vector<vector<ll>> g(n + 1);
+    vector<vector<ll>> g(n + 1);// А всё это можно было спрятать в структурку с названием вершина, что было бы приятнее на глаз
     vector<ll> used(n + 1, 0);
     vector<ll> ans;
     for (ll i = 0; i < m; ++i) {
