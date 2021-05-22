@@ -24,7 +24,7 @@ int main() {
 ll const INF = 1e18, N = 3e3 + 10, MOD = 1e9 + 7;
 ll dp[N][N];
 
-void solve () {
+void get_and_Solve () {
     int n, m;
     cin >> n >> m;
     vector<ll> f(n + 1);
