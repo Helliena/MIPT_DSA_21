@@ -26,7 +26,8 @@ void solve(){
      ll n;
      cin >> n;
      vector<vector<ll>> dp ((1 << n) + 10, vector<ll> (n, INF));
-     vector<vector<ll>> p((1 << n) + 10, vector<ll> (n, INF));
+     vector<vector<ll>> p((1 << n) + 10, vector<ll> (n, INF));// Зачем тебе второй массив такого размера, можно же просто по dp восстановить ответ перебором
+	// по маскам без последнего города
      vector<vector<ll>> m (n, vector<ll> (n, 0));
      for (ll i = 0; i < n; ++i) {
         for (ll j = 0; j < n; ++j) {
@@ -51,8 +52,8 @@ void solve(){
                     }
                 }
             }
-          }
-       }
+        }
+    }
      ll prev, ans = INF, mask = (1 << n) - 1;
      for (ll i = 0 ; i < n; ++i) {
         if (dp[(1 << n) - 1][i] < ans) {
