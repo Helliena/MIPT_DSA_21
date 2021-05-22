@@ -29,7 +29,7 @@ int main() {
 }
 
 ll const N = 1e7 + 3;
-list<pair<string, string>> a[N];
+list<pair<string, string>> a[N];// Аналогично((
 ll power[N];
 
 ll hash_function (string s, ll p) {
@@ -50,7 +50,8 @@ void solve() {
             cin >> x >> y;
             ll h = hash_function(x, 71) % N;
             bool f = 0;
-            for (auto i = a[h].begin() ; i != a[h].end() ; ++i) {
+            for (auto i = a[h].begin() ; i != a[h].end() ; ++i) {// Для всей этой магии по хорошему стоило один раз написать функцию поиска (а ещё лучше класс)
+                // И уже тут использовать
                 pair<string, string> t = *i;
                 if (t.f == x) {
                     i->second = y;
