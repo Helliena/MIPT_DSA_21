@@ -49,7 +49,7 @@ void DFS(vector<bool>& used, ll v, ll p) {
 
 
 void solve(){
-    ll n, m, u, v;
+    ll n, m, u, v;// Что, куда, зачем... просто алфавит
     cin >> n >> m;
     for (ll i = 0; i < m; ++i) {
         cin >> u >> v;
